@@ -6,10 +6,8 @@ class Config:
     General configuration parent class
     '''
     SECRET_KEY = os.environ.get("SECRET_KEY")
-    DEBUG = False
-    TESTING = False
-    CSRF_ENABLED = True
-    SECRET_KEY = 'this-really-needs-to-be-changed'
+    CSRF_ENABLED = os.environ.get('CSRF_ENABLED')
+    SECRET_KEY = os.environ.get("SECRET_KEY")
     SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
 
 
@@ -20,7 +18,7 @@ class ProductionConfig(Config):
 
 
 class DevelopmentConfig(Config):
-    DEBUG = True
+    DEBUG = os.environ.get('DEBUG')
 
 
 class TestingConfig(Config):

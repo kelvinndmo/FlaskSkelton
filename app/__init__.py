@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 db = SQLAlchemy()
-from app.models import User
+# from app.models import User
 
 # create an application factory
 
@@ -30,8 +30,10 @@ def create_app(config_name):
     # register your blueprints here
     from app.main import main
     from app.auth import auth
+    
 
     app.register_blueprint(main)
     app.register_blueprint(auth)
+
 
     return app

@@ -1,9 +1,11 @@
+import os
+
 from flask_script import Manager, Server
 from flask_migrate import Migrate, MigrateCommand
 
 from app import create_app, db
 
-app = create_app('production')
+app = create_app(os.environ.get('CONFIG_OPTION'))
 
 manager = Manager(app)
 manager.add_command('server', Server)
