@@ -27,7 +27,7 @@
 
 **Version control (Git)** [https://git-scm.com/](url)
 
-**Version control (Flask)** [https://flask.palletsprojects.com/en/1.1.x/(url)
+**Version control (Flask)** [https://flask.palletsprojects.com/en/1.1.x/](url)
 
 **Version control (Python)** [https://www.python.org/](url)
 
